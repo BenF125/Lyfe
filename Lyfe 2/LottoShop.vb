@@ -201,6 +201,10 @@
 
         MyGame.Money = MyGame.Money + PA
 
+        btnLT.Enabled = True
+        btnST.Enabled = True
+        btnPAP.Enabled = True
+
     End Sub
 
     Private Sub btnPB_Click(sender As Object, e As EventArgs) Handles btnPB.Click
@@ -224,6 +228,10 @@
         MessageBox.Show("You got " & PB & " money.", "Nice!", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         MyGame.Money = MyGame.Money + PB
+
+        btnLT.Enabled = True
+        btnST.Enabled = True
+        btnPAP.Enabled = True
 
     End Sub
 
@@ -249,6 +257,10 @@
 
         MyGame.Money = MyGame.Money + PC
 
+        btnLT.Enabled = True
+        btnST.Enabled = True
+        btnPAP.Enabled = True
+
     End Sub
 
     Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click
@@ -269,6 +281,10 @@
             MessageBox.Show("You don't have enough money to play. Come back when you have at least 5 money.", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return
         End If
+
+        btnLT.Enabled = False
+        btnST.Enabled = False
+        btnPAP.Enabled = False
 
         '~~HE DEFIANTLY HAS AT LEAST 5 DOLLARS BELOW THIS POINT~~
 
