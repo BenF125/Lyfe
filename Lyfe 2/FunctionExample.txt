@@ -1,0 +1,18 @@
+PA = PickAPrize()
+PB = PickAPrize()
+PC = PickAPrize()
+
+Function PickAPrize()
+    Rand = rnd.Next(1, 5)
+    If Rand = 1 Then
+        Return 100
+    ElseIf Rand = 2 Then
+        Return 50
+    ElseIf Rand = 3 Then
+        Return 10
+    ElseIf Rand = 4 Then
+        Return 0
+    ElseIf Rand = 5 Then
+        Return 0
+    End If
+End Function
