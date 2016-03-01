@@ -19,55 +19,30 @@
             PA = 0
         ElseIf Rand = 5 Then
             PA = 0
-        ElseIf Rand = 6 Then
-            PA = 0
-        ElseIf Rand = 7 Then
-            PA = 0
         End If
 
     End Function
 
-    Function PickAPrizeB()
+    ' Original code from dad
 
-        Rand = rnd.Next(1, 5)
-        If Rand = 1 Then
-            PB = 100
-        ElseIf Rand = 2 Then
-            PB = 50
-        ElseIf Rand = 3 Then
-            PB = 10
-        ElseIf Rand = 4 Then
-            PB = 0
-        ElseIf Rand = 5 Then
-            PB = 0
-        ElseIf Rand = 6 Then
-            PB = 0
-        ElseIf Rand = 7 Then
-            PB = 0
-        End If
+    '    PA = PickAPrize()
+    'PB = PickAPrize()
+    'PC = PickAPrize()
 
-    End Function
-
-    Function PickAPrizeC()
-
-        Rand = rnd.Next(1, 5)
-        If Rand = 1 Then
-            PC = 100
-        ElseIf Rand = 2 Then
-            PC = 50
-        ElseIf Rand = 3 Then
-            PC = 10
-        ElseIf Rand = 4 Then
-            PC = 0
-        ElseIf Rand = 5 Then
-            PC = 0
-        ElseIf Rand = 6 Then
-            PC = 0
-        ElseIf Rand = 7 Then
-            PC = 0
-        End If
-
-    End Function
+    'Function PickAPrize()
+    '        Rand = rnd.Next(1, 5)
+    '        If Rand = 1 Then
+    '            Return 100
+    '        ElseIf Rand = 2 Then
+    '            Return 50
+    '        ElseIf Rand = 3 Then
+    '            Return 10
+    '        ElseIf Rand = 4 Then
+    '            Return 0
+    '        ElseIf Rand = 5 Then
+    '            Return 0
+    '        End If
+    '    End Function
 
     Private Sub LottoShop_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
 
@@ -193,16 +168,12 @@
 
     Private Sub btnPA_Click(sender As Object, e As EventArgs) Handles btnPA.Click
 
-        PickAPrizeA()
+        'PickAPrizeA()
+
+        PA = PickAPrizeA()
 
         btnPA.Text = PA
-
-        PickAPrizeB()
-
         btnPB.Text = PB
-
-        PickAPrizeC()
-
         btnPC.Text = PC
 
         btnPA.Enabled = False
@@ -223,16 +194,12 @@
 
     Private Sub btnPB_Click(sender As Object, e As EventArgs) Handles btnPB.Click
 
-        PickAPrizeA()
+        'PickAPrizeA()
+
+        PB = PickAPrizeA()
 
         btnPA.Text = PA
-
-        PickAPrizeB()
-
         btnPB.Text = PB
-
-        PickAPrizeC()
-
         btnPC.Text = PC
 
         btnPA.Enabled = False
@@ -253,16 +220,12 @@
 
     Private Sub btnPC_Click(sender As Object, e As EventArgs) Handles btnPC.Click
 
-        PickAPrizeA()
+        'PickAPrizeA()
+
+        PC = PickAPrizeA()
 
         btnPA.Text = PA
-
-        PickAPrizeB()
-
         btnPB.Text = PB
-
-        PickAPrizeC()
-
         btnPC.Text = PC
 
         btnPA.Enabled = False
