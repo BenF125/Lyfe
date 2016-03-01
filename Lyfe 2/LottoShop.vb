@@ -8,7 +8,7 @@
 
     Function PickAPrizeA()
 
-        Rand = rnd.Next(1, 5)
+        Rand = rnd.Next(1, 7)
         If Rand = 1 Then
             PA = 100
         ElseIf Rand = 2 Then
@@ -18,6 +18,10 @@
         ElseIf Rand = 4 Then
             PA = 0
         ElseIf Rand = 5 Then
+            PA = 0
+        ElseIf Rand = 6 Then
+            PA = 0
+        ElseIf Rand = 7 Then
             PA = 0
         End If
 
@@ -36,6 +40,10 @@
             PB = 0
         ElseIf Rand = 5 Then
             PB = 0
+        ElseIf Rand = 6 Then
+            PB = 0
+        ElseIf Rand = 7 Then
+            PB = 0
         End If
 
     End Function
@@ -52,6 +60,10 @@
         ElseIf Rand = 4 Then
             PC = 0
         ElseIf Rand = 5 Then
+            PC = 0
+        ElseIf Rand = 6 Then
+            PC = 0
+        ElseIf Rand = 7 Then
             PC = 0
         End If
 
@@ -205,6 +217,8 @@
         btnST.Enabled = True
         btnPAP.Enabled = True
 
+        MyGame.MainForm.UpdateStats()
+
     End Sub
 
     Private Sub btnPB_Click(sender As Object, e As EventArgs) Handles btnPB.Click
@@ -232,6 +246,8 @@
         btnLT.Enabled = True
         btnST.Enabled = True
         btnPAP.Enabled = True
+
+        MyGame.MainForm.UpdateStats()
 
     End Sub
 
@@ -261,6 +277,8 @@
         btnST.Enabled = True
         btnPAP.Enabled = True
 
+        MyGame.MainForm.UpdateStats()
+
     End Sub
 
     Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click
@@ -276,6 +294,14 @@
     End Sub
 
     Private Sub btnPAP_Click(sender As Object, e As EventArgs) Handles btnPAP.Click
+
+        btnPA.Text = "Pot A"
+        btnPB.Text = "Pot B"
+        btnPC.Text = "Pot C"
+
+        btnPA.Enabled = True
+        btnPB.Enabled = True
+        btnPC.Enabled = True
 
         If MyGame.Money < 5 Then
             MessageBox.Show("You don't have enough money to play. Come back when you have at least 5 money.", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

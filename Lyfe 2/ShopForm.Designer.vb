@@ -50,7 +50,7 @@ Partial Class ShopForm
         'btnExitShop
         '
         Me.btnExitShop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnExitShop.Location = New System.Drawing.Point(388, 352)
+        Me.btnExitShop.Location = New System.Drawing.Point(388, 342)
         Me.btnExitShop.Name = "btnExitShop"
         Me.btnExitShop.Size = New System.Drawing.Size(75, 23)
         Me.btnExitShop.TabIndex = 0
@@ -73,7 +73,7 @@ Partial Class ShopForm
         Me.GroupBox1.Controls.Add(Me.btnBuyApple)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 20)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(130, 355)
+        Me.GroupBox1.Size = New System.Drawing.Size(130, 345)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Purchase and Sell"
@@ -257,13 +257,14 @@ Partial Class ShopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(473, 387)
+        Me.ClientSize = New System.Drawing.Size(473, 377)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Prices)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lstFluc)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnExitShop)
+        Me.MinimumSize = New System.Drawing.Size(489, 350)
         Me.Name = "ShopForm"
         Me.Text = "Shop"
         Me.GroupBox1.ResumeLayout(False)

@@ -21,6 +21,16 @@
 
         lbBananas.Text = "Bananas: " & MyGame.Bananas
 
+        progMaxEn.Maximum = MyGame.MaxEnergy
+
+        progMaxEn.Value = Energy
+
+        If Energy = 10 Then
+
+            progMaxEn.ForeColor = Color.Yellow
+
+        End If
+
     End Function
     Function EndGame()
 

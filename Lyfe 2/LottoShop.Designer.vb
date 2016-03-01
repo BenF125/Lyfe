@@ -383,6 +383,7 @@ Partial Class LottoShop
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(456, 426)
         Me.Name = "LottoShop"
         Me.Text = "Lottery Shop"
         Me.GroupBox1.ResumeLayout(False)

@@ -37,6 +37,7 @@ Partial Class Form1
         Me.lbMaxEn = New System.Windows.Forms.Label()
         Me.lbEnergy = New System.Windows.Forms.Label()
         Me.lbMoney = New System.Windows.Forms.Label()
+        Me.progMaxEn = New System.Windows.Forms.ProgressBar()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -61,9 +62,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.btnShop)
         Me.GroupBox1.Controls.Add(Me.btnWork)
         Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Location = New System.Drawing.Point(453, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(357, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(170, 433)
+        Me.GroupBox1.Size = New System.Drawing.Size(170, 377)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Options:"
@@ -72,7 +73,7 @@ Partial Class Form1
         '
         Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button6.Font = New System.Drawing.Font("Sitka Small", 12.0!)
-        Me.Button6.Location = New System.Drawing.Point(6, 347)
+        Me.Button6.Location = New System.Drawing.Point(6, 291)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(158, 37)
         Me.Button6.TabIndex = 7
@@ -93,7 +94,7 @@ Partial Class Form1
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button4.Font = New System.Drawing.Font("Sitka Small", 12.0!)
-        Me.Button4.Location = New System.Drawing.Point(6, 390)
+        Me.Button4.Location = New System.Drawing.Point(6, 334)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(158, 37)
         Me.Button4.TabIndex = 5
@@ -132,16 +133,17 @@ Partial Class Form1
         '
         'GroupBox2
         '
-        Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.progMaxEn)
         Me.GroupBox2.Controls.Add(Me.lbBananas)
         Me.GroupBox2.Controls.Add(Me.lbApples)
         Me.GroupBox2.Controls.Add(Me.lbBBerries)
         Me.GroupBox2.Controls.Add(Me.lbMaxEn)
         Me.GroupBox2.Controls.Add(Me.lbEnergy)
-        Me.GroupBox2.Controls.Add(Me.lbMoney)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 195)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 151)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(169, 250)
+        Me.GroupBox2.Size = New System.Drawing.Size(169, 238)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Stats:"
@@ -149,7 +151,7 @@ Partial Class Form1
         'lbBananas
         '
         Me.lbBananas.AutoSize = True
-        Me.lbBananas.Location = New System.Drawing.Point(7, 106)
+        Me.lbBananas.Location = New System.Drawing.Point(7, 88)
         Me.lbBananas.Name = "lbBananas"
         Me.lbBananas.Size = New System.Drawing.Size(55, 13)
         Me.lbBananas.TabIndex = 9
@@ -158,7 +160,7 @@ Partial Class Form1
         'lbApples
         '
         Me.lbApples.AutoSize = True
-        Me.lbApples.Location = New System.Drawing.Point(7, 88)
+        Me.lbApples.Location = New System.Drawing.Point(7, 70)
         Me.lbApples.Name = "lbApples"
         Me.lbApples.Size = New System.Drawing.Size(42, 13)
         Me.lbApples.TabIndex = 8
@@ -167,7 +169,7 @@ Partial Class Form1
         'lbBBerries
         '
         Me.lbBBerries.AutoSize = True
-        Me.lbBBerries.Location = New System.Drawing.Point(6, 70)
+        Me.lbBBerries.Location = New System.Drawing.Point(6, 52)
         Me.lbBBerries.Name = "lbBBerries"
         Me.lbBBerries.Size = New System.Drawing.Size(65, 13)
         Me.lbBBerries.TabIndex = 7
@@ -176,7 +178,7 @@ Partial Class Form1
         'lbMaxEn
         '
         Me.lbMaxEn.AutoSize = True
-        Me.lbMaxEn.Location = New System.Drawing.Point(6, 52)
+        Me.lbMaxEn.Location = New System.Drawing.Point(6, 34)
         Me.lbMaxEn.Name = "lbMaxEn"
         Me.lbMaxEn.Size = New System.Drawing.Size(66, 13)
         Me.lbMaxEn.TabIndex = 6
@@ -185,7 +187,7 @@ Partial Class Form1
         'lbEnergy
         '
         Me.lbEnergy.AutoSize = True
-        Me.lbEnergy.Location = New System.Drawing.Point(6, 34)
+        Me.lbEnergy.Location = New System.Drawing.Point(6, 16)
         Me.lbEnergy.Name = "lbEnergy"
         Me.lbEnergy.Size = New System.Drawing.Size(43, 13)
         Me.lbEnergy.TabIndex = 5
@@ -194,21 +196,30 @@ Partial Class Form1
         'lbMoney
         '
         Me.lbMoney.AutoSize = True
-        Me.lbMoney.Location = New System.Drawing.Point(6, 16)
+        Me.lbMoney.Location = New System.Drawing.Point(12, 31)
         Me.lbMoney.Name = "lbMoney"
         Me.lbMoney.Size = New System.Drawing.Size(42, 13)
         Me.lbMoney.TabIndex = 4
         Me.lbMoney.Text = "Money:"
+        '
+        'progMaxEn
+        '
+        Me.progMaxEn.Location = New System.Drawing.Point(9, 215)
+        Me.progMaxEn.Name = "progMaxEn"
+        Me.progMaxEn.Size = New System.Drawing.Size(157, 23)
+        Me.progMaxEn.TabIndex = 4
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(635, 457)
+        Me.ClientSize = New System.Drawing.Size(539, 401)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lbDay)
+        Me.Controls.Add(Me.lbMoney)
+        Me.MinimumSize = New System.Drawing.Size(376, 340)
         Me.Name = "Form1"
         Me.Text = "Lyfe"
         Me.GroupBox1.ResumeLayout(False)
@@ -234,4 +245,5 @@ Partial Class Form1
     Friend WithEvents lbBananas As Label
     Friend WithEvents lbApples As Label
     Friend WithEvents lbBBerries As Label
+    Friend WithEvents progMaxEn As ProgressBar
 End Class
